@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.parent {
+  display: inline-block;
+  background-color: #af47ff;
+  padding: 30px;
+  width: 49%;
+  box-sizing: border-box;
+}
+.child {
+  background-color: #ff4797;
+  padding: 30px;
+}
+.box {
+  background-color: #f3ff47;
+  padding: 30px;
+  border: 2px dotted #333;
+  text-align: center;
+  font-size: 2em;
+}
+@media (min-width:1024px){
+  .parent {
+    background-color: #000000;
+  }
+}
+@media (max-width:768px){
+  .parent{
+    width:100%;
+  }
+  .child {
+    background-color: green;
+  }
+}
+
+@media (max-width:500px){
+  .child {
+    background-color: blue;
+  }
+}

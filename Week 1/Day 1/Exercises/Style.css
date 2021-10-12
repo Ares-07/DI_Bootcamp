@@ -1,0 +1,83 @@
+h1 {
+	font-family: 'Rubik', sans-serif;
+	text-align: center;
+	color: darkred;
+}
+
+body {
+background-image: url(https://images.unsplash.com/photo-1583764425300-c7a7ca43fd15?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80); 
+ background-size: cover;
+
+ }
+
+h2 {
+	font-family: 'Rubik', sans-serif;
+	color: red;
+}
+h3{
+	font-family: 'Rubik', sans-serif;
+	color: red;
+}
+
+.Intro p{
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-size: large;
+	}
+
+img {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.Content p{
+	text-align: left;
+	font-family: 'Dosis', sans-serif;
+}
+
+span { 
+	text-align: right;
+	font-size: medium;
+	font-family: 'Rubik', sans-serif;
+	display: block;
+	float: right;
+	;
+	 }
+
+a {
+	text-align: right;
+	font-size: medium;
+	font-family: 'Rubik', sans-serif;
+}
+
+.hobbies {
+	font-family: 'Dosis', sans-serif;
+}
+
+.facebook {
+	float: left;
+}
+.instagram {
+	float: left;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.quote {
+	font-family: 'Birthstone', cursive;
+	text-align: center;
+	font-size: 40px;
+}
+
+.goback {
+	text-align: right;
+	font-size: medium;
+	font-family: 'Rubik', sans-serif;}
+
+form {
+	text-align: center;
+}
