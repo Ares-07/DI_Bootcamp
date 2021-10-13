@@ -1,0 +1,137 @@
+
+.logo {
+    float: left;
+}
+
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+p {
+  font-family: 'Cairo', sans-serif;
+  color: white;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+.black {
+   position:relative ;
+  top: 200px;
+  left: 1100px;
+}
+.natasha{
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  color: white;
+   text-align: center;
+  position: relative;
+  left: 90px;
+}
+
+.iron{
+  position:absolute ;
+  top: 800px;
+  left: 600px;
+}
+
+.tony {
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  color: white;
+   text-align: center;
+  position: relative;
+  left: 100px;
+}
+
+.captain {
+  position:absolute ;
+  top: 800px;
+  left: 100px;
+
+}
+
+.rodgers {
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  color: white;
+   text-align: center;
+  position: relative;
+  left: 60px;
+}
+
+.fury {
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  color: white;
+  size: 70px;
+  text-align: center;
+  position: relative;
+  left: 90px;
+ 
+
+  
+}
+
+.nick {
+  position:absolute ;
+  top: 470px;
+  left: 600px;
+
+
+}
+/*
+@media only screen and (min-width: 600px) {
+    div {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+    div {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    div {
+        width: 25%;
+        float: left;
+    }
+}
+*/
+
+body {
+background-image: url(https://lovelytab.com/wp-content/uploads/2019/04/Avengers-Minimalist-Wallpapers-1024x640.jpg); 
+ background-size: cover;
+
+
+.

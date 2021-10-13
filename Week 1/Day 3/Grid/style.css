@@ -1,0 +1,51 @@
+.outer {
+	display: grid;
+	grid-template-columns: minmax(200px, 3fr) 4fr 5fr;
+	/*calculate the fraction of the screen and divide it*/
+	grid-template-rows: repeat(3, 200px); 
+	grid-gap:15px ; 
+		/*or grid-column-gap: 10px;*/
+	 	/*or grid-row-gap: 10px;*/
+
+}
+
+.inner {
+	border: 1px solid #000;
+	padding: 30px;
+}
+
+.box-1 {
+	background-color: palegoldenrod;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	/*controls the size/position of the box in the grid*/
+}
+
+.box-2 {
+	background-color: palegreen;
+	/*grid-row-start: 1;*/
+	/*grid-row-end: 2;*/
+}
+
+.box-3 {
+	background-color: paleturquoise;
+	/*grid-area: 1 / 2 / 3 / 4;*/
+	/*column start/row start/colunm end/row end*/
+}
+
+.box-4 {
+	background-color: palevioletred;
+	/*grid-column: 1 / span 2;*/
+}
+
+.box-5 {
+	background-color: whitesmoke;
+	grid-column-start: 2;
+	grid-column-end: 5;
+}
+
+.box-6 {
+	background-color: violet;
+	grid-column: 1 / 5;
+	/*the shortcut for doing it*/
+}

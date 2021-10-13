@@ -1,0 +1,40 @@
+.outer {
+	/* Flexbox is used for the parent container */
+	height: 300px;
+	width: 100% ;
+	display: flex; /* or inline-flex */
+	flex-direction: row; /* or row-inverse/colum-inverse */
+	justify-content: center; /* or flex-start/flex-end/space-between/space-around */
+	align-items: flex-start ; /* or flex-end/center/stretch/baseline */
+}
+
+.inner {
+	border: 1px dotted #000;
+	padding:  30px;
+	align-self: center;
+}
+
+.box-1 {
+	background-color: #af47ff;
+	order: 10;
+	align-self: stretch;
+	flex-grow: 1;
+	/*flex-shrink: 2;*/
+}
+
+.box-2 {
+	background-color: #ff4797;
+	order: 20;
+	align-self: flex-end;
+	flex-grow: 2;
+	/*flex-shrink: 3;*/
+
+}
+
+.box-3 {
+	background-color: #f3ff47;
+	order: 30;
+	align-self: center;
+	flex-grow: 3;
+	/*flex-shrink: 4;*/
+}
