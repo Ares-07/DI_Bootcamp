@@ -5,11 +5,11 @@
 .wrapper {
 	display: grid;
 	grid-gap: var(--pixel-20-gap);
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 3fr 3fr;
 	grid-template-areas:
-	"header header"
-	"sidebar content"
-	"footer footer" ;
+	"sidebar header header"
+	"sidebar content content"
+	"sidebar footer footer" ;
 }
 
 header{

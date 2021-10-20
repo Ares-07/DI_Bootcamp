@@ -1,0 +1,170 @@
+body {
+	background-image: url(https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80);
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 50px;
+}
+
+
+.cv {
+
+
+	display: grid;
+	justify-content: center;
+	grid-template-columns:300px 600px;
+	grid-template-rows: 210px 800px 140px;
+	grid-template-areas: 
+	"sidebar header "
+	"sidebar article"
+	"sidebar footer"
+
+}
+
+header {
+	background-color: #E5E4E4;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-area: header;
+	padding: 10px;
+
+}
+
+article {
+	background-color: #E5E4E4;
+	grid-area: article;
+	padding-left: 10px;
+	justify-content: center;
+
+}
+
+aside {
+	background-color: #4B4B4B;
+	color: white;
+	padding: 10px;
+
+	grid-area: sidebar;
+	list-style-type: none;
+}
+ul {
+	list-style-type: none;
+	font-family: 'Teko', sans-serif;
+}
+
+h1{
+	font-family: 'Bebas Neue', cursive;
+	font-size: 7vh;
+	line-height: 2px;
+	margin: 1;
+}
+
+h2{
+	font-family: 'Bebas Neue', cursive;
+	font-size: 30px;
+	line-height: 3px;
+}
+h3 {
+	margin: 0;
+	font-size: 25px;
+	font-family: 'Archivo Narrow', sans-serif;
+	align-items: center;
+}
+p {
+	line-height: 5px;
+	font-size: 18px;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+span {
+	font-size: 17px;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+footer {
+	background-color: #E5E4E4;
+	padding: 10px;
+	grid-area: footer;
+}
+
+section {
+	display: flex;
+	padding: 10px;
+	margin-left: 20px;
+	/*justify-content: center;*/
+	justify-content: space-evenly;
+}
+
+
+
+.social a{
+	position: relative;
+    color:#81ebbf;
+	font-size: 20px;
+	margin-right: 60px;
+	transition: 0.3s;
+	transition-property: transform;
+}
+
+
+a:hover {
+ transform: scale(1.5);
+}
+
+.pp {
+	position: relative;
+	top: 20px ;
+	left: 400px;
+}
+.prof {
+	line-height: 2px;
+}
+
+.contact{
+	font-size: 18px;
+}
+.email {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 6px;
+	right: 10px;
+}
+.phone {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 6px;
+	right: 10px;
+}
+.address {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 6px;
+	right: 10px;
+}
+.web {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 6px;
+	right: 10px;
+}
+
+.sub {
+	font-size: 22px;
+}
+
+.subsub {
+	font-size: 19px;
+}
+
+.skills {
+	font-size: 18px;
+}
+
+.language {
+	font-size: 18px;
+}
+
+.club {
+	font-size: 18px;
+}
