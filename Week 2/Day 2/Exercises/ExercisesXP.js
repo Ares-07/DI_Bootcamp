@@ -77,22 +77,22 @@
 
 // Exercise 4: Group Chat
 
-let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"]
-let res = users.length
-console.log (res)
+// let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"]
+// let res = users.length
+// console.log (res)
 
-if (res === 1) {
-	console.log (users[0]+"is online.")
-}
+// if (res === 1) {
+// 	console.log (users[0]+"is online.")
+// }
 
-else if (res === 2) {
-	console.log(users[0]+ " and "+ users[1]+ " are online.")
-}
+// else if (res === 2) {
+// 	console.log(users[0]+ " and "+ users[1]+ " are online.")
+// }
 
-else if (res > 2) {
-	console.log(users[0]+ ", " + users[1] +" and "+ (res - 2)+ " are online.")
-}
+// else if (res > 2) {
+// 	console.log(users[0]+ ", " + users[1] +" and "+ (res - 2)+ " are online.")
+// }
 
-else {
-	console.log("No one is online.")
-}
+// else {
+// 	console.log("No one is online.")
+// }

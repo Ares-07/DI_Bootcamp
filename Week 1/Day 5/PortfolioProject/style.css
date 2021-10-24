@@ -20,7 +20,9 @@ article {
 	padding: 1px;
 }
 
-
+.button {
+	padding: 50px;
+}
 
 .intro {
 	position: absolute;

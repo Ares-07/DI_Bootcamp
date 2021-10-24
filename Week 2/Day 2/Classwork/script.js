@@ -19,6 +19,7 @@
 // 	alert ("Sorry, you are too young to drive this car. Powering off.")
 // }
 
+// -------------------------------------------------------------------
 
 // Exercise 2
 
@@ -38,6 +39,7 @@
 //     alert( "I don't know such values" );
 // }
 
+// -------------------------------------------------------------------
 
 // Exercise 3
 
@@ -58,6 +60,7 @@
 //     alert('The result is strange. Really.');
 // }
 
+// -------------------------------------------------------------------
 
 
 // Exercise 4
@@ -94,6 +97,7 @@
 // 	alert ("We hope that this page looks ok!")
 // };
 
+// -------------------------------------------------------------------
 
 // Exercise 5
 // Write an if condition to check that age is between 14 and 90 inclusively.
@@ -110,25 +114,25 @@ result = Number(result)
 
 // Check the range between
 
-// if (result >= 14 && result <= 90) {
-// 	alert("Congrats!, You are eligible.")
-// }
+if (result >= 14 && result <= 90) {
+	alert("Congrats!, You are eligible.")
+}
 
-// else {
-// 	alert("Ooops, you are not eligible, better luck next time!")
-// }
+else {
+	alert("Ooops, you are not eligible, better luck next time!")
+}
 
 // Check the range outside
 
 // Variant 1
 
-// if (!(result >= 14 && result <= 90)) {
-// 	alert ("You are one lucky person!")
-// }
+if (!(result >= 14 && result <= 90)) {
+	alert ("You are one lucky person!")
+}
 
-// else {
-// 	alert ("Bad luck! you form part of the majority.")
-// }
+else {
+	alert ("Bad luck! you form part of the majority.")
+}
 
 // Variant 2
 
