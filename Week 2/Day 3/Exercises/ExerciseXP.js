@@ -112,19 +112,26 @@
 
 //----------------- Exercise 7 : Secret Group
 
+//
+//let names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+//console.log(names);
+//let names1 = names.sort();
+//console.log(names.sort());
+//
+//let arr = []
+//
+//for (i in names){
+//  let res = names[i].slice(0,1)
+//  console.log(res)
+//  arr.push (res)
+//}
+//  console.log (arr)
+//  let res1 = arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]
+//console.log(res1)
 
-let names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
-console.log(names);
-let names1 = names.sort();
-console.log(names.sort());
-
-let arr = []
-
-for (i in names){
-  let res = names[i].slice(0,1)
-  console.log(res)
-  arr.push (res)
+let infoAboutMe = () => {
+	let name = "advait";
+	let age = "23";
+	let hobbies = "gaming";
+	console.log("My name is " + name + " and i'm " + age + " yrs old." "My fav. hobby is " + hobbies + ".")
 }
-  console.log (arr)
-  let res1 = arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]
-console.log(res1)
