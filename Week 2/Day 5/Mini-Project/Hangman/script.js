@@ -20,41 +20,38 @@
 
 
 function hangmanGame() {
-	let word_to_guess = "";
-	do {
-		//get user hidden word
-	let word_to_guess = prompt ("Please enter a word to guess -  min 8 letters")
-	console.log (word_to_guess)	
+	let word_to_guese = "";
+	do{
+		// get user hidden word
+		word_to_guese = prompt('Please enter a word to guese - min 8 Letters');
+		console.log(word_to_guese.length);
 	}
-	while(word_to_guess.length < 8)//should be a min of 8 letters
+	while(word_to_guese.length < 8) //should be 8 min of 8 letters
 
-	let word_arr = word_to_guess.split(' ');
-	let word_hidden = "*".repeat(word_to_guess.length).split(' ');
-
+	let word_arr = word_to_guese.split('');
+	let word_hidden = "*".repeat(word_to_guese.length).split('');
 
 	console.log(word_hidden.join(''));
 
-
 	let guesses = 0;
-	//10 guesses for user2
-	while (guesses < 10){
-		let = prompt('Please guess a letter');
-
-		//check if letter exists
-		for (let i =0; i < word_arr.length; i++){
-			if (word_arr[i]===letter){
+	// 10 guesses for user2
+	while(guesses < 10){
+		let letter = prompt('Pleas guese a letter');
+		// check if letter exists
+		for (var i = 0; i < word_arr.length; i++) {
+			if(word_arr[i]===letter){
 				word_hidden[i] = letter;
 			}
 		}
-		if (word_hidden.includes('*')){
-			alert('You won!');
+		console.log(word_hidden.join(''));
+		if(!word_hidden.includes('*')){
+			console.log('You Won');
 			return;
 		}
-		console.log(word_hidden.join(''));
-		guesses++
+		guesses++;
 	}
-	if (guess >=10){
-		alert("You lose");
+	if(guesses>=10){
+		console.log('You Lose');
 	}
 }
 hangmanGame();

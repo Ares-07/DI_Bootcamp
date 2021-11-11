@@ -1,0 +1,9 @@
+.main-bg {
+  display: flex;
+}
+
+.inner-div {
+  
+  border: 1px solid #rgba(255, 0, 0, 0.5);
+
+}
