@@ -41,7 +41,7 @@ else : print("GoodBye World!")
 
 
 #exercise 9
-height = int(input("What's your height (cm)?"))
-if height > 145 : print("You are too tall")
-elif height < 100 : print("You are too short")
-else : print("You may get in")
+# height = int(input("What's your height (cm)?"))
+# if height > 145 : print("You are too tall!")
+# elif height < 100 : print("You are too short!")
+# else : print("You may get in!")
