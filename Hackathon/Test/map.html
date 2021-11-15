@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    .test {
+      width: 75%;
+      float: right;
+      padding: 15px;
+      border: 1px solid red;
+    }
+
+    .map {
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      top: 11%;
+      right: 6%;
+      /* float: right; */
+    }
+
+    .loc1 {
+      /* le morne */
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      top: 105%;
+      right: 26%;
+    }
+
+    /* --------------------------------- pop up */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 180px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 309%;
+      left: -60%;
+      margin: -57px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="test">
+    <img class="map" src="13ee78a7da75b7e180830a1966e7c919.jpg" width="450px" alt="">
+    <section class="loc1">
+      <div class="popup" onclick="myFunction1()">
+        <img src="location.png" width="25px" height="25px" alt="">
+        <div class="popuptext" id="myPopup1">
+          <h3>Le Morne Brabant</h3>
+          <button type="button" class="btn btn-info btn-sm">Read More</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    // le morne
+    function myFunction1() {
+      var popup = document.getElementById("myPopup1");
+      popup.classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>

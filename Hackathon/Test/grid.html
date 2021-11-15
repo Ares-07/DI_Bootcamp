@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style media="screen">
+    @gray-darker: #444444;
+    @gray-dark: #696969;
+    @gray: #999999;
+    @gray-light: #cccccc;
+    @gray-lighter: #ececec;
+    @gray-lightest: lighten(@gray-lighter, 4%);
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      background-color: #f0f0f0;
+    }
+
+    body {
+      color: @gray;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0;
+      padding: 1rem;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -moz-font-feature-settings: "liga"on;
+    }
+
+    img {
+      width: 500px;
+      /* height: auto;
+      max-width: 100%; */
+      vertical-align: middle;
+    }
+
+    .btn {
+      background-color: white;
+      border: 1px solid @gray-light;
+      //border-radius: 1rem;
+      color: @gray-dark;
+      padding: 0.5rem;
+      text-transform: lowercase;
+    }
+
+    .btn--block {
+      display: block;
+      width: 100%;
+    }
+
+    .cards {
+
+      width: 300px;
+      display: flex;
+      /* flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0; */
+    }
+
+    .cards__item {
+      display: flex;
+      padding: 1rem;
+
+      @media(min-width: 40rem) {
+        width: 50%;
+      }
+
+      @media(min-width: 56rem) {
+        width: 33.3333%;
+      }
+    }
+
+    .card {
+      width: 500px;
+
+
+      background-color: white;
+      border-radius: 0.25rem;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+
+      /* flex-direction: column;
+      overflow: hidden; */
+    }
+
+    &:hover {
+      .card__image {
+        filter: contrast(100%);
+      }
+    }
+    }
+
+    .card__content {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .card__image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      filter: contrast(70%);
+      //filter: saturate(180%);
+      overflow: hidden;
+      position: relative;
+      transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+      ;
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%; // 16:9 aspect ratio
+      }
+
+      @media(min-width: 40rem) {
+        &::before {
+          padding-top: 66.6%; // 3:2 aspect ratio
+        }
+      }
+    }
+
+    /* .card__image--flowers {
+      background-image: url(https://images.unsplash.com/photo-1511275888751-32c486874063?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGdyaXMlMjBncmlzJTIwbWF1cml0aXVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    }
+
+    .card__image--river {
+      background-image: url(https://unsplash.it/800/600?image=11);
+    }
+
+    .card__image--record {
+      background-image: url(https://unsplash.it/800/600?image=39);
+    }
+
+    .card__image--fence {
+      background-image: url(https://unsplash.it/800/600?image=59);
+    } */
+
+    .card__title {
+      color: @gray-dark;
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .card__text {
+      flex: 1 1 auto;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="cards">
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"> <img src="https://mauritiusattractions.com/slir/w854/content/images/places-of-interest/cap-malheureux/cap-malheureux%20(4).jpg" alt="north"> </div>
+              <div class="card__content">
+                <div class="card__title">North</div>
+                <p class="card__text">With a string of powder-white beaches and more sunny days than anywhere else on Mauritius, the north is the most touristed area on the island.</p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="col">
+
+        <div class="cards">
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"> <img src="https://mauritiusattractions.com/slir/w854/content/images/places-of-interest/cap-malheureux/cap-malheureux%20(4).jpg" alt="north"> </div>
+              <div class="card__content">
+                <div class="card__title">North</div>
+                <p class="card__text">With a string of powder-white beaches and more sunny days than anywhere else on Mauritius, the north is the most touristed area on the island.</p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cards">
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"> <img src="https://mauritiusattractions.com/slir/w854/content/images/places-of-interest/cap-malheureux/cap-malheureux%20(4).jpg" alt="north"> </div>
+              <div class="card__content">
+                <div class="card__title">North</div>
+                <p class="card__text">With a string of powder-white beaches and more sunny days than anywhere else on Mauritius, the north is the most touristed area on the island.</p>
+                <button class="btn btn--block card__btn">Button</button>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        2 of 2
+      </div>
+    </div>
+
+    <div class="cards">
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--fence"> <img src="https://mauritiusattractions.com/slir/w854/content/images/places-of-interest/cap-malheureux/cap-malheureux%20(4).jpg" alt="north"> </div>
+          <div class="card__content">
+            <div class="card__title">North</div>
+            <p class="card__text">With a string of powder-white beaches and more sunny days than anywhere else on Mauritius, the north is the most touristed area on the island.</p>
+            <button class="btn btn--block card__btn">Button</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--river"> <img src="https://mauritiusattractions.com/slir/w640-c2x1/content/images/gallery/1148/mauritius-south-west-tour-classic-private-tour%20(1).jpg" alt="south"></div>
+          <div class="card__content">
+            <div class="card__title">South</div>
+            <p class="card__text">The southern region of Mauritius, also known as the Wild South, is the most preserved part of the island; it stands out from the other regions with its incredible cliffs and impressive waves, creating a feeling of
+              closeness to nature.
+            </p>
+            <button class="btn btn--block card__btn">Button</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--record"> <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/shutterstock_1118102852.jpg" alt="east"></div>
+          <div class="card__content">
+            <div class="card__title">Centre</div>
+            <p class="card__text">The visit of the central region and its towns are to be included in your plans during your stay in Mauritius. The coastal area with the beaches and water activities is very popular among tourists, but the centre has
+              also a lot to offer with a different pace of life.
+            </p>
+            <button class="btn btn--block card__btn">Button</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--record"> <img src="https://deih43ym53wif.cloudfront.net/ile-aux-cerfs-island-mauritius-shutterstock_297247070_e928e1d8ac.jpeg" alt="east"></div>
+          <div class="card__content">
+            <div class="card__title">East</div>
+            <p class="card__text">The eastern region of Mauritius features large stretches of sandy beaches. This part of the island is also the windiest, with a pleasant soft breeze in summer and becomes cooler in winter, beaten by the south-east
+            </p>
+            <button class="btn btn--block card__btn">Button</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--flowers"> <img src="https://mauritiusattractions.com/slir/w640-c2x1/content/images/gallery/1148/mauritius-south-west-tour-classic-private-tour%20(8).jpg" alt="west"></div>
+          <div class="card__content">
+            <div class="card__title">West</div>
+            <p class="card__text">The west of Mauritius will offer you a completely different experience of the country. It is the sunniest and driest region of the island, with a nature and landscapes that will remind you of the African savanna.</p>
+            <button class="btn btn--block card__btn">Button</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--flowers"> <img src="https://mauritiusattractions.com/slir/w640-c2x1/content/images/gallery/1148/mauritius-south-west-tour-classic-private-tour%20(8).jpg" alt="west"></div>
+          <div class="card__content">
+            <div class="card__title">West</div>
+            <p class="card__text">The west of Mauritius will offer you a completely different experience of the country. It is the sunniest and driest region of the island, with a nature and landscapes that will remind you of the African savanna.</p>
+            <button class="btn btn--block card__btn">Button</button>
+          </div>
+        </div>
+      </li>
+    </div>
+
+</body>
+
+</html>
