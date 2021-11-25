@@ -1,19 +1,19 @@
 #Exercise 1
-import datetime
+# import datetime
 # today = datetime.date.today()
 # def toDay():
 #     print ("today is:",today)
 #
 # toDay()
-#
+
 # #Exercise 2
-# from datetime import datetime
-# def now_jan():
-#     jan = datetime(2022, 1, 1)
-#     diff = jan-datetime.now()
-#     print(f'The 1st of January is in {abs(diff)} hours')
-# now_jan()
-#
+from datetime import datetime
+def now_jan():
+    jan = datetime(2022, 1, 1)
+    diff = jan-datetime.now()
+    print(f'The 1st of January is in {abs(diff)} hours')
+now_jan()
+
 # #Exercise 3
 # def min_alive(birthdate):
 #
