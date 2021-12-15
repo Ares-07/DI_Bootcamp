@@ -1,0 +1,22 @@
+#1
+import pandas as pd
+import numpy as np
+#2,3
+iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data',sep=',')
+# print(iris)
+#4
+sepal_length = iris.ix[:,0]
+sepal_width = iris.ix[:,1]
+petal_length = iris.ix[:,2]
+petal_width = iris.ix[:,3]
+class_ = iris.ix[:,4]
+#5
+print(iris.isnull().sum().sum())
+#6
+petal_length.ix[10] = np.nan
+petal_length.ix[29] = np.nan
+#7
+petal_length = petal_length.fillna(1.0)
+#8
+print(class_)
+class_ = class_.drop(class_.loc[0,:],axis=1)

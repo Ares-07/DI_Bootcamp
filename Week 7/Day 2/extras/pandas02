@@ -1,0 +1,42 @@
+#1
+import pandas as pd
+import numpy as np
+
+#2,3
+users = pd.read_csv('https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user',sep='|')
+print(users)
+
+#4
+mean_age = users.groupby(['occupation'])['age'].mean()
+print(mean_age)
+
+#5
+bool_male = users['gender'] == 'M'
+male_ratio = users[bool_male]
+m_ratio = male_ratio.groupby(['occupation'])['gender'].count()
+print(m_ratio.sort_values(ascending=False))
+
+#6
+max = users.groupby(['occupation'])['age'].max()
+print(max)
+min = users.groupby(['occupation'])['age'].min()
+print(min)
+
+#7
+new_df = pd.DataFrame(users,columns=['occupation','age','gender'])
+means = new_df.groupby(['occupation','gender'])['age'].mean()
+print(means)
+
+#8
+men = users['gender'] == 'M'
+women = users['gender'] == 'F'
+users['gender'] = men
+overall = users.groupby(['occupation'])['gender'].count()
+mens_df = users.groupby(['occupation'])['gender'].sum()/overall
+# print(mens_df)
+users['gender'] = women
+women_df = users.groupby(['occupation'])['gender'].sum()/overall
+# print(women_df)
+frames = [mens_df,women_df]
+result = pd.concat(frames,keys = ['men','women','occupation'])
+print(result)

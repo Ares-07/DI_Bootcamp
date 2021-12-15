@@ -1,0 +1,38 @@
+#1
+import pandas as pd
+#2,3
+chipo = pd.read_csv('https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv',sep='\t')
+#4
+print(chipo.head(10))
+#5
+print(len(chipo))
+#6
+print(chipo.count(1))
+#7
+print(chipo.columns.values)
+#8
+print(chipo.loc[2][3])
+#9
+print("!!!!!!!!!!!!!!")
+sorted_df = chipo.groupby(['item_name']).sum()
+s = sorted_df.sort_values(by='quantity').idxmax()
+# df.index[df['BoolCol']].tolist()
+print(s)
+print("################################################")
+print(chipo.groupby(['item_name'])['quantity'].sum().max())
+#11
+print(chipo['choice_description'].value_counts())
+#12
+print(chipo['quantity'].sum())
+#13
+dollarizer = lambda x: float(x[1:])
+chipo['item_price'] = chipo['item_price'].apply(dollarizer)
+#14
+print((chipo['quantity'] * chipo['item_price']).sum())
+#15
+total_orders = chipo['order_id'].unique()
+print(len(total_orders))
+#16
+print(chipo['quantity'].sum()/len(total_orders))
+#17
+print(chipo['item_name'].nunique())

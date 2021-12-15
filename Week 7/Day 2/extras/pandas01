@@ -1,0 +1,37 @@
+#1
+import pandas as pd
+import numpy as np
+#2,3
+chipo = pd.read_csv('https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv',sep='\t')
+#4
+dollarizer = lambda x: float(x[1:])
+
+chipo['item_price'] = chipo['item_price'].apply(dollarizer)
+
+bool1 = chipo['item_price']>10
+five_or_more = chipo[bool1]
+print(np.count_nonzero(five_or_more['item_name'].unique()))
+
+#5
+new_df = pd.DataFrame(chipo,columns=['item_name','item_price'])
+new_df = new_df.groupby(['item_name'])['item_price'].unique()
+
+#6
+print(chipo.sort_values(by='item_name'))
+
+#7
+chipo = chipo.sort_values(by='item_price')
+print(chipo['quantity'].max())
+
+#8
+bool1 = chipo['item_name'] == 'Veggie Salad Bowl'
+veggies_bowls = chipo[bool1]
+print(np.count_nonzero(veggies_bowls['item_name']))
+
+#9
+bool1 = chipo['item_name'] == 'Canned Soda'
+soda_canned = chipo[bool1]
+print(soda_canned)
+bool2 = chipo['quantity'] > 1
+more_then_one_cann = chipo[bool2]
+print(np.count_nonzero(more_then_one_cann['quantity']))

@@ -1,0 +1,18 @@
+{%load static%}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {{ page_title|default:"Animal" }}
+        {% endblock title %}
+    </title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+
+<h1> <li> family {{family}}: {{animal.name}} </li> </h1>
+
+<h2> <p> Speed: {{animal.speed}}</p> </h2>
+<h2> <p> Weight: {{animal.weight}}</p> </h2>
